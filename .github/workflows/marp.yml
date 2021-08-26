@@ -1,4 +1,4 @@
-name: Publish example slides to GitHub Pages
+name: exec marp and deploy to github pages
 on:
   push:
     branches:
@@ -19,4 +19,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./2021-08-26/

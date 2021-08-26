@@ -12,9 +12,11 @@ jobs:
 
       - name: Convert Markdown into HTML and PDF (ja)
         uses: KoharaKazuya/marp-cli-action@v1
+        with:
+          config-file: ./.marprc.yml
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./examples
+          publish_dir: ./
